@@ -36,7 +36,7 @@ a {
     font-family: var(--font-base);
 }
 .sr-section {
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 6vh;
 }
 

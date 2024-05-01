@@ -1,0 +1,81 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Base Classes */
+:root {
+    --font-base: "Satoshi", sans-serif;
+    --font-heading: "Montserrat", sans-serif;
+    --font-subHeading: "Lato", sans-serif;
+
+    --nav-bg-clr: #111;
+    --body-bg-clr: #eee;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: var(--font-base);
+    background-color: var(--body-bg-clr);
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    font-family: var(--font-base);
+}
+.sr-section {
+    height: 100vh;
+    padding-top: 6vh;
+}
+
+.sr-section-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 20px 0px;
+    font-family: var(--font-heading);
+}
+
+/* Nav Section */
+.nav-section {
+    height: 6vh;
+    background-color: var(--nav-bg-clr);
+}
+
+.logo-text h1 {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+}
+
+.desk-nav li a{
+    color: #fff;
+}
+/* Nav Section */
+
+/* Project Section */
+.card-title {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 0px;
+}
+
+.card-text {
+    font-family: var(--font-subHeading);
+    line-height: 25px;
+    text-align: justify;
+}
+
+/* Project Section */

@@ -271,7 +271,7 @@ h3 {
     border: 1px solid #00000062;
     background-color: #f1f1f1;
     transition: all .5s;
-    box-shadow: 6px 6px 8px 0px #8b8b8b;
+    /* box-shadow: 6px 6px 8px 0px #8b8b8b; */
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
     border-radius: 16px;
@@ -279,38 +279,36 @@ h3 {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 0, 0, 0.3);
+
+
 }
 
 .skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+    box-shadow: 5px 5px 10px 0px rgba(255, 68, 0, 0.5);
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(2) {
+    box-shadow: 5px 5px 10px 0px rgba(30, 143, 255, 0.5);
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(3) {
+    box-shadow: 5px 5px 10px 0px #f7de1e83;
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(4) {
+    box-shadow: 5px 5px 10px 0px #8211fa75;
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(5) {
+    box-shadow: 5px 5px 10px 0px rgba(255, 68, 0, 0.5);
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(6) {
+    box-shadow: 5px 5px 10px 0px rgba(30, 143, 255, 0.445);
     scale: 1.1;
 }
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
-    scale: 1.1;
-}
-.skills-card:hover:nth-child(1) {
-    box-shadow: 6px 6px 12px 0px #8b8b8b;
+.skills-card:hover:nth-child(7) {
+    box-shadow: 5px 5px 10px 0px #484c8981;
     scale: 1.1;
 }
 

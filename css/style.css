@@ -1,4 +1,6 @@
-/* For Scrollbar */
+/*  ==========================================================================
+    Scrollbar
+    ==========================================================================  */
 ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
@@ -41,14 +43,15 @@
     background: transparent;
 }
 
-/* For Scrollbar */
+/*  ==========================================================================
+    Base Class
+    ==========================================================================  */
 
 @font-face {
     font-family: 'Sentient';
     src: url(../fonts/Sentient-Regular.ttf);
 }
 
-/* Base Classes */
 :root {
     --font-logo: "Sentient", sans-serif;
     --font-base: "Lato", sans-serif;
@@ -71,9 +74,10 @@ html {
 
 body {
     font-family: var(--font-base);
-    background-color: #8EC5FC;
-    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
-    
+    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    /* background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+
 }
 
 ul {
@@ -106,6 +110,7 @@ p {
     min-height: 100vh;
     height: auto;
     padding: 10vh 0;
+
 }
 
 .sr-section-title {
@@ -128,16 +133,18 @@ p {
     transform: translate(-50%, -50%);
 }
 
-/* Nav Section */
+/*  ==========================================================================
+    Navigation Section
+    ==========================================================================  */
 .nav-section {
-    height: 8vh;
+    height: 60px;
     /* background-color: var(--nav-bg-clr); */
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .logo-text h1 {
@@ -148,18 +155,18 @@ p {
     margin: 0;
 }
 
-.desk-nav {
+.desktop-menu {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.desk-nav li a {
+.desktop-menu li a {
     color: #000;
 }
 
 /* nav btn CSS */
-.nav-link {
+.desktop-menu li .nav-link {
     text-transform: capitalize;
     --b: 2px;
     /* border thickness */
@@ -170,8 +177,7 @@ p {
     padding: calc(.5em + var(--s)) calc(.9em + var(--s));
     color: var(--color);
     --_p: var(--s);
-    background:
-        conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    background: conic-gradient(from 90deg at var(--b) var(--b), #0000 90deg, var(--color) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
     transition: .3s linear, color 0s, background-color 0s;
     outline: var(--b) solid #0000;
     outline-offset: .6em;
@@ -183,8 +189,8 @@ p {
     touch-action: manipulation;
 }
 
-.nav-link:hover,
-.nav-link:focus-visible {
+.desktop-menu li .nav-link:hover,
+.desktop-menu li .nav-link:focus-visible {
     --_p: 0px;
     outline-color: var(--color);
     outline-offset: unset;
@@ -196,9 +202,53 @@ p {
     color: #fff;
 }
 
-/* Nav Section */
+/* Slick Nav Customization */
+.mobile-menu {
+    display: none;
+}
+.slicknav_menu{
+    background: unset;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    /* padding: 7px; */
+}
 
-/* Hero Section */
+.mobile-menu .slicknav_nav {
+    width: 200px;
+
+    /* box-shadow: 6px 6px 8px 0px #8b8b8b; */
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.484);
+    border-radius: 5px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+    position: absolute;
+    top: 130%;
+    right: 10px;
+}
+
+.mobile-menu .slicknav_nav a {
+    color: #000;
+    padding: 12px 10px;
+    margin: 0;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.mobile-menu .slicknav_btn {
+    margin: 0;
+}
+
+.mobile-menu .slicknav_nav a:hover {
+    border-radius: 0;
+    background-color:rgba(13, 110, 253, 0.25)
+}
+
+/*  ==========================================================================
+    Hero Section
+    ==========================================================================  */
 .hero-image img {
     width: 400px;
     border: 1px solid #000;
@@ -220,7 +270,8 @@ h3 {
 
 .gradient-text {
     background-color: #0093E9;
-    background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%);
+    /* background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%); */
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--font-heading);
@@ -235,10 +286,12 @@ h3 {
 .resume button {
     padding: 10px 12px;
     border: 2px solid #000;
-    border-radius: 15px;
+    border-radius: 5px;
     color: #212121;
     z-index: 1;
+    /* background-color: #e8e8e8; */
     background-color: #e8e8e8;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
     position: relative;
     font-weight: 600;
     font-size: 14px;
@@ -253,6 +306,7 @@ h3 {
     left: 0;
     height: 100%;
     width: 0;
+    /* background-color: #212121; */
     background-color: #212121;
     z-index: -1;
     transition: all .4s ease-in-out;
@@ -267,9 +321,10 @@ h3 {
     width: 100%;
 }
 
-/* Hero Section */
 
-/* Skills Section */
+/*  ==========================================================================
+    Skills Section
+    ==========================================================================  */
 .skills-cards {
     display: flex;
     flex-wrap: wrap;
@@ -304,26 +359,32 @@ h3 {
     box-shadow: 5px 5px 10px 0px rgba(255, 68, 0, 0.5);
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(2) {
     box-shadow: 5px 5px 10px 0px rgba(30, 143, 255, 0.5);
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(3) {
     box-shadow: 5px 5px 10px 0px #f7de1e83;
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(4) {
     box-shadow: 5px 5px 10px 0px #8211fa75;
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(5) {
     box-shadow: 5px 5px 10px 0px rgba(255, 68, 0, 0.5);
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(6) {
     box-shadow: 5px 5px 10px 0px rgba(30, 143, 255, 0.445);
     scale: 1.1;
 }
+
 .skills-card:hover:nth-child(7) {
     box-shadow: 5px 5px 10px 0px #484c8981;
     scale: 1.1;
@@ -337,9 +398,10 @@ h3 {
     font-family: var(--font-heading);
 }
 
-/* Skills Section */
 
-/* Project Section */
+/*  ==========================================================================
+    Project Section
+    ==========================================================================  */
 .project-card {
     position: relative;
     padding: 10px;
@@ -347,18 +409,19 @@ h3 {
     height: 100%;
 
 
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 
 .project-card img {
     min-height: 250px;
 }
+
 .project-card-title {
     font-family: var(--font-heading);
     font-weight: bold;
@@ -394,16 +457,16 @@ h3 {
 
 
 
-.live-view:hover{
+.live-view:hover {
     bottom: 3%;
     left: 50%;
     transform: translate(-50%, -3%);
 }
 
 
-/* Project Section */
-
-/* Contact Section */
+/*  ==========================================================================
+    Contact Section
+    ==========================================================================  */
 .contact-section {
     position: relative;
 }
@@ -487,5 +550,3 @@ h3 {
     right: -20px;
     transition: 0.4s;
 }
-
-/* Contact Section */

@@ -9,7 +9,7 @@
 
 
 /* Mobile Small 320px */
-@media only screen and ( max-width: 426px ){
+@media only screen and ( max-width: 425px ){
     /* Hero */
     .hero-content p {
         font-size: 14px;
@@ -41,4 +41,22 @@
     .copyright {
         font-size: 11px;
     }
+
+    /* Skills */
+    .skills-cards {
+        gap: 10px;
+    }
+    .skills-card i{
+        font-size: 80px;
+    }
+
+    .skills-card {
+        width: 130px;
+        height: 150px;
+    }
+}
+
+
+@media only screen and ( max-width: 768px ){
+
 }

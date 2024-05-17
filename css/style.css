@@ -153,6 +153,7 @@ p {
     color: #000;
     font-size: 25px;
     margin: 0;
+    display: inline-block;
 }
 
 .desktop-menu {
@@ -220,7 +221,7 @@ p {
 
     /* box-shadow: 6px 6px 8px 0px #8b8b8b; */
     /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.484);
+    background: #495057db;
     border-radius: 5px;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
@@ -235,7 +236,10 @@ p {
     padding: 12px 10px;
     margin: 0;
     font-size: 15px;
+    font-weight: 600;
     text-transform: capitalize;
+    text-align: center;
+    color: #fff;
 }
 .mobile-menu .slicknav_btn {
     margin: 0;
@@ -243,7 +247,7 @@ p {
 
 .mobile-menu .slicknav_nav a:hover {
     border-radius: 0;
-    background-color:rgba(13, 110, 253, 0.25)
+    background-color:rgba(0, 0, 0, 0.125);
 }
 
 /*  ==========================================================================
@@ -351,7 +355,7 @@ h3 {
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(0, 0, 0, 0.3);
-
+    gap: 12px;
 
 }
 
@@ -455,14 +459,18 @@ h3 {
     transition: all .2s ease-in-out;
 }
 
-
-
 .live-view:hover {
     bottom: 3%;
     left: 50%;
     transform: translate(-50%, -3%);
 }
 
+.project-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, 300px);
+    place-content: center;
+}
 
 /*  ==========================================================================
     Contact Section

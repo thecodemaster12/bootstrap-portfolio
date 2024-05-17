@@ -70,14 +70,16 @@
 
 html {
     scroll-behavior: smooth;
+    /* cursor: url('cursor_icon.png'), auto; */
 }
 
 body {
     font-family: var(--font-base);
-    background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+    /* background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%); */
     /* background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
-
+    /* cursor: url("https://abs.twimg.com/emoji/v2/72x72/1f525.png"); */
+    background-color: #6997c6;
 }
 
 ul {
@@ -253,6 +255,22 @@ p {
 /*  ==========================================================================
     Hero Section
     ==========================================================================  */
+
+.hero-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+section#hero {
+}
 .hero-image img {
     width: 400px;
     border: 1px solid #000;
@@ -262,20 +280,33 @@ p {
 h3 {
     font-family: var(--font-subHeading);
     font-weight: 600;
+    color: #000;
 }
 
 .hero-content h1 {
     font-size: 60px;
     font-weight: 900;
     font-family: var(--font-heading);
+    color: #000;
 }
 
-.hero-content p {}
+.hero-content p {
+    color: #000;
+}
 
 .gradient-text {
     background-color: #0093E9;
     /* background-image: linear-gradient(90deg, #0093E9 0%, #80D0C7 100%); */
-    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+    background-image: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%); */
+    background-color: #FFDEE9;
+    background-image: linear-gradient(45deg, #FFDEE9 0%, #B5FFFC 100%);
+    
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-family: var(--font-heading);
@@ -325,6 +356,24 @@ h3 {
     width: 100%;
 }
 
+/* Particle css */
+
+#particles-js {
+    /* width: 100%;
+    height: 100vh;
+    background-image: url('');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat; */
+    position: relative;
+    min-height: 100vh;
+}
+
+#particles-js canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /*  ==========================================================================
     Skills Section
